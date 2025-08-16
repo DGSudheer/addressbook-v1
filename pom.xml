@@ -5,7 +5,7 @@
     <groupId>com.preethidevops.tutorial</groupId>
     <artifactId>addressbook</artifactId>
     <packaging>war</packaging>
-    <version>3.0</version>
+    <version>4.0</version>
     <name>Vaadin Addressbook example</name>
 
     <properties>
@@ -157,8 +157,13 @@
 
 		</dependencies>
 
-    <build>
-        <plugins>
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.3.2</version> <!-- Works with Java 8–17+ -->
+        </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -515,11 +520,11 @@
             </reporting>
         </profile>
     </profiles>
- <distributionManagement>
-    <repository>
-        <id>central</id>
-        <name>a0mtonokjoolg-artifactory-primary-0-releases</name>
-        <url>https://devopsdemotrial.jfrog.io/artifactory/test-libs-release</url>
-    </repository>
-</distributionManagement>
+    <distributionManagement>
+        <repository>
+            <id>central</id>
+            <name>dgsudheer-demo-libs-release-releases</name>
+            <url>https://dgsudheer.jfrog.io/artifactory/demo-libs-release</url>
+        </repository>
+    </distributionManagement>
 </project>
