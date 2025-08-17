@@ -33,7 +33,7 @@ pipeline {
             }
         }
         stage('Package') {
-            agent 'linux_jenkins_slave1'
+            agent label {'linux_jenkins_slave1'}
             steps {
                 echo 'package analysis'
                 sh 'mvn package'
