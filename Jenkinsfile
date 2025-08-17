@@ -35,7 +35,7 @@ pipeline {
         stage('Publish') {
             steps {
                 echo 'publishing to jfrog'
-                sh 'mvn -U deploy -s settigns.xml'
+                sh 'mvn -U deploy -s settings.xml'
             }
         }
     }
